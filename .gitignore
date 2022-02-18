@@ -11,4 +11,5 @@
 /app/.externalNativeBuild
 /app/release
 /app/play
+/app/.cxx
 keystore.properties
