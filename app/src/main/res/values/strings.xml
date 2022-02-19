@@ -136,6 +136,8 @@
     <string name="setting_hosts_url">Hosts file download URL</string>
     <string name="setting_hosts_download">Download hosts file</string>
 
+    <string name="setting_development_options">Development</string>
+
     <string name="setting_technical">Technical information</string>
     <string name="setting_technical_general">General</string>
     <string name="setting_technical_networks">Networks</string>

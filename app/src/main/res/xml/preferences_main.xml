@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="screen_defaults"
+        android:title="@string/setting_defaults" />
+
+    <Preference
+        android:key="screen_options"
+        android:title="@string/setting_options" />
+
+    <Preference
+        android:key="screen_network_options"
+        android:title="@string/setting_network_options" />
+
+    <Preference
+        android:key="screen_advanced_options"
+        android:title="@string/setting_advanced_options" />
+
+    <Preference
+        android:key="screen_stats"
+        android:title="@string/setting_stats_category" />
+
+    <Preference
+        android:key="screen_backup"
+        android:title="@string/setting_backup" />
+
+    <Preference
+        android:key="screen_development"
+        android:title="@string/setting_development_options" />
+
+    <Preference
+        android:key="screen_technical"
+        android:title="@string/setting_technical" />
+
+</PreferenceScreen>

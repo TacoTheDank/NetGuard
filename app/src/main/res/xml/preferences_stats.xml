@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="show_stats"
+        android:summary="@string/summary_stats"
+        android:title="@string/setting_stats" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:dependency="show_stats"
+        android:key="show_top"
+        android:title="@string/setting_stats_top" />
+
+    <EditTextPreference
+        android:defaultValue="1000"
+        android:dependency="show_stats"
+        android:key="stats_frequency" />
+
+    <EditTextPreference
+        android:defaultValue="90"
+        android:dependency="show_stats"
+        android:key="stats_samples" />
+
+</PreferenceScreen>
