@@ -67,9 +67,11 @@
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
+        android:defaultValue="3"
         android:dependency="filter"
         android:key="rcode"
         android:summary="@string/summary_rcode"
+        android:title="@string/setting_rcode"
         app:iconSpaceReserved="false" />
 
     <Preference
@@ -79,34 +81,49 @@
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
+        android:defaultValue="10.1.10.1"
         android:hint="10.1.10.1"
         android:key="vpn4"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_vpn4"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
+        android:defaultValue="fd00:1:fd00:1:fd00:1:fd00:1"
         android:hint="fd00:1:fd00:1:fd00:1:fd00:1"
         android:key="vpn6"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_vpn6"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
         android:dependency="filter"
         android:key="dns"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_dns"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
         android:dependency="filter"
         android:key="dns2"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_dns2"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
+        android:defaultValue="www.google.com"
         android:hint="www.google.com"
         android:key="validate"
         android:summary="@string/summary_validate"
+        android:title="@string/setting_validate"
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
+        android:defaultValue="259200"
         android:dependency="filter"
         android:key="ttl"
+        android:summary="@string/summary_ttl"
+        android:title="@string/setting_ttl"
         app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
@@ -121,38 +138,50 @@
         android:dependency="filter"
         android:hint="127.0.0.1"
         android:key="socks5_addr"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_socks5_addr"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
         android:dependency="filter"
         android:hint="1080"
         android:key="socks5_port"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_socks5_port"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
         android:dependency="filter"
         android:key="socks5_username"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_socks5_username"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <EditTextPreference
         android:dependency="filter"
         android:key="socks5_password"
+        android:title="@string/setting_socks5_password"
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="64"
         android:key="pcap_record_size"
+        android:summary="@string/summary_pcap_record_size"
+        android:title="@string/setting_pcap_record_size"
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="2"
         android:key="pcap_file_size"
+        android:summary="@string/summary_pcap_file_size"
+        android:title="@string/setting_pcap_file_size"
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="0"
         android:key="watchdog"
         android:summary="@string/summary_watchdog"
+        android:title="@string/setting_watchdog"
         app:iconSpaceReserved="false" />
 
     <Preference

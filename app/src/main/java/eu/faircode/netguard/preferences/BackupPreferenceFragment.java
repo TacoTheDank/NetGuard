@@ -116,18 +116,12 @@ public class BackupPreferenceFragment extends PreferenceFragmentCompat {
                 openHostsLauncher.launch(null);
                 return true;
             });
-            hostsImportAppendPref.setEnabled(hostsImportPref.isEnabled());
             hostsImportAppendPref.setOnPreferenceClickListener(preference -> {
                 openHostsAppendLauncher.launch(null);
                 return true;
             });
 
             // Handle hosts file download
-            hostsUrlPref.setSummary(hostsUrlPref.getText());
-            hostsUrlPref.setOnPreferenceChangeListener((preference, newValue) -> {
-                hostsUrlPref.setSummary(prefs.getString("hosts_url", BuildConfig.HOSTS_FILE_URI));
-                return true;
-            });
             hostsDownloadPref.setOnPreferenceClickListener(preference -> {
                 String hosts_url = hostsUrlPref.getText();
                 if ("https://www.netguard.me/hosts".equals(hosts_url)) {

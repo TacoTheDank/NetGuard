@@ -34,9 +34,9 @@ public class NetworkPreferenceFragment extends PreferenceFragmentCompat {
         } else {
             final Set<String> ssids = prefs.getStringSet("wifi_homes", new HashSet<>());
             if (ssids.size() > 0) {
-                wifiHomes.setTitle(getString(R.string.setting_wifi_home, TextUtils.join(", ", ssids)));
+                wifiHomes.setSummary(getString(R.string.summary_wifi_home, TextUtils.join(", ", ssids)));
             } else {
-                wifiHomes.setTitle(getString(R.string.setting_wifi_home, "-"));
+                wifiHomes.setSummary(getString(R.string.summary_wifi_home, "-"));
             }
             final WifiManager wm = (WifiManager) getContext().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             final List<CharSequence> listSSID = new ArrayList<>();
@@ -56,9 +56,9 @@ public class NetworkPreferenceFragment extends PreferenceFragmentCompat {
             wifiHomes.setOnPreferenceChangeListener((preference, newValue) -> {
                 final Set<String> ssid = prefs.getStringSet("wifi_homes", new HashSet<>());
                 if (ssid.size() > 0) {
-                    wifiHomes.setTitle(getString(R.string.setting_wifi_home, TextUtils.join(", ", ssid)));
+                    wifiHomes.setSummary(getString(R.string.summary_wifi_home, TextUtils.join(", ", ssid)));
                 } else {
-                    wifiHomes.setTitle(getString(R.string.setting_wifi_home, "-"));
+                    wifiHomes.setSummary(getString(R.string.summary_wifi_home, "-"));
                 }
                 return true;
             });

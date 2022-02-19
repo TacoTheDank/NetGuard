@@ -27,7 +27,8 @@
         android:hint="https://www.netguard.me/hosts"
         android:key="hosts_url"
         android:title="@string/setting_hosts_url"
-        app:iconSpaceReserved="false" />
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <Preference
         android:dependency="hosts_url"

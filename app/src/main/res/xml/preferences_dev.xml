@@ -7,8 +7,8 @@
         android:entries="@array/logLevelNames"
         android:entryValues="@array/logLevelValues"
         android:key="loglevel"
-        android:summary="Log level verbose, debug and info will impact performance and battery usage"
-        android:title="Native log level"
+        android:summary="@string/summary_loglevel"
+        android:title="@string/setting_loglevel"
         app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat

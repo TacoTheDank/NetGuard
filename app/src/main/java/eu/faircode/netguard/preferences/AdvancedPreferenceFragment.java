@@ -43,9 +43,11 @@ public class AdvancedPreferenceFragment extends PreferenceFragmentCompat {
             final SwitchPreferenceCompat logApp = findPreference("log_app");
             final SwitchPreferenceCompat filter = findPreference("filter");
             logApp.setEnabled(false);
-            logApp.setSummary(R.string.msg_unavailable);
+            logApp.setSummary(getString(R.string.summary_log_app)
+                    + "\n\n" + getString(R.string.msg_unavailable));
             filter.setEnabled(false);
-            filter.setSummary(R.string.msg_unavailable);
+            filter.setSummary(getString(R.string.summary_filter)
+                    + "\n\n" + getString(R.string.msg_unavailable));
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -66,12 +68,7 @@ public class AdvancedPreferenceFragment extends PreferenceFragmentCompat {
         });
 
         final EditTextPreference rcode = findPreference("rcode");
-        rcode.setTitle(getString(R.string.setting_rcode, prefs.getString("rcode", "3")));
         rcode.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_NUMBER));
-        rcode.setOnPreferenceChangeListener((preference, newValue) -> {
-            rcode.setTitle(getString(R.string.setting_rcode, prefs.getString("rcode", "3")));
-            return true;
-        });
 
         final Preference forwarding = findPreference("forwarding");
         forwarding.setOnPreferenceClickListener(preference -> {
@@ -89,116 +86,80 @@ public class AdvancedPreferenceFragment extends PreferenceFragmentCompat {
 
 
         final EditTextPreference vpn4 = findPreference("vpn4");
-        vpn4.setTitle(getString(R.string.setting_vpn4, prefs.getString("vpn4", "10.1.10.1")));
         vpn4.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_PHONE));
         vpn4.setOnPreferenceChangeListener((preference, newValue) -> {
             updateVpnPref("vpn4", vpn4);
-            vpn4.setTitle(getString(R.string.setting_vpn4, prefs.getString("vpn4", "10.1.10.1")));
             return true;
         });
 
         final EditTextPreference vpn6 = findPreference("vpn6");
-        vpn6.setTitle(getString(R.string.setting_vpn6, prefs.getString("vpn6", "fd00:1:fd00:1:fd00:1:fd00:1")));
         vpn6.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_TEXT));
         vpn6.setOnPreferenceChangeListener((preference, newValue) -> {
             updateVpnPref("vpn6", vpn6);
-            vpn6.setTitle(getString(R.string.setting_vpn6, prefs.getString("vpn6", "fd00:1:fd00:1:fd00:1:fd00:1")));
             return true;
         });
 
         final EditTextPreference dns1 = findPreference("dns");
-        dns1.setTitle(getString(R.string.setting_dns, prefs.getString("dns", "-")));
         dns1.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_TEXT));
         dns1.setOnPreferenceChangeListener((preference, newValue) -> {
             updateDnsPref("dns", dns1);
-            dns1.setTitle(getString(R.string.setting_dns, prefs.getString("dns", "-")));
             return true;
         });
 
         final EditTextPreference dns2 = findPreference("dns2");
-        dns2.setTitle(getString(R.string.setting_dns, prefs.getString("dns2", "-")));
         dns2.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_TEXT));
         dns2.setOnPreferenceChangeListener((preference, newValue) -> {
             updateDnsPref("dns2", dns2);
-            dns2.setTitle(getString(R.string.setting_dns, prefs.getString("dns2", "-")));
             return true;
         });
 
         final EditTextPreference validate = findPreference("validate");
-        validate.setTitle(getString(R.string.setting_validate, prefs.getString("validate", "www.google.com")));
         validate.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_TEXT));
         validate.setOnPreferenceChangeListener((preference, newValue) -> {
             updateValidatePref("validate", validate);
-            validate.setTitle(getString(R.string.setting_validate, prefs.getString("validate", "www.google.com")));
             return true;
         });
 
         final EditTextPreference ttl = findPreference("ttl");
-        ttl.setTitle(getString(R.string.setting_ttl, prefs.getString("ttl", "259200")));
         ttl.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_NUMBER));
-        ttl.setOnPreferenceChangeListener((preference, newValue) -> {
-            ttl.setTitle(getString(R.string.setting_ttl, prefs.getString("ttl", "259200")));
-            return true;
-        });
 
         final EditTextPreference socks5Addr = findPreference("socks5_addr");
-        socks5Addr.setTitle(getString(R.string.setting_socks5_addr, prefs.getString("socks5_addr", "-")));
         socks5Addr.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_TEXT));
         socks5Addr.setOnPreferenceChangeListener((preference, newValue) -> {
             updateSocksPref("socks5_addr", socks5Addr);
-            socks5Addr.setTitle(getString(R.string.setting_socks5_addr, prefs.getString("socks5_addr", "-")));
             return true;
         });
 
         final EditTextPreference socks5Port = findPreference("socks5_port");
-        socks5Port.setTitle(getString(R.string.setting_socks5_port, prefs.getString("socks5_port", "-")));
         socks5Port.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_NUMBER));
-        socks5Port.setOnPreferenceChangeListener((preference, newValue) -> {
-            socks5Port.setTitle(getString(R.string.setting_socks5_port, prefs.getString("socks5_port", "-")));
-            return true;
-        });
 
         final EditTextPreference socks5Username = findPreference("socks5_username");
-        socks5Username.setTitle(getString(R.string.setting_socks5_username, prefs.getString("socks5_username", "-")));
         socks5Username.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_TEXT));
-        socks5Username.setOnPreferenceChangeListener((preference, newValue) -> {
-            socks5Username.setTitle(getString(R.string.setting_socks5_username, prefs.getString("socks5_username", "-")));
-            return true;
-        });
 
         final EditTextPreference socks5Password = findPreference("socks5_password");
-        socks5Password.setTitle(getString(R.string.setting_socks5_password, TextUtils.isEmpty(prefs.getString("socks5_username", "")) ? "-" : "*****"));
+        socks5Password.setSummary(TextUtils.isEmpty(prefs.getString("socks5_username", "")) ? "" : "*****");
         socks5Password.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD));
         socks5Password.setOnPreferenceChangeListener((preference, newValue) -> {
-            socks5Password.setTitle(getString(R.string.setting_socks5_password, TextUtils.isEmpty(prefs.getString("socks5_username", "")) ? "-" : "*****"));
+            socks5Password.setSummary(TextUtils.isEmpty(prefs.getString("socks5_username", "")) ? "" : "*****");
             return true;
         });
 
         final EditTextPreference pcapRecordSize = findPreference("pcap_record_size");
-        pcapRecordSize.setTitle(getString(R.string.setting_pcap_record_size, prefs.getString("pcap_record_size", "64")));
         pcapRecordSize.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_NUMBER));
         pcapRecordSize.setOnPreferenceChangeListener((preference, newValue) -> {
-            pcapRecordSize.setTitle(getString(R.string.setting_pcap_record_size, prefs.getString("pcap_record_size", "64")));
             updatePcapPref();
             return true;
         });
 
         final EditTextPreference pcapFileSize = findPreference("pcap_file_size");
-        pcapFileSize.setTitle(getString(R.string.setting_pcap_file_size, prefs.getString("pcap_file_size", "2")));
         pcapFileSize.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_NUMBER));
         pcapFileSize.setOnPreferenceChangeListener((preference, newValue) -> {
-            pcapFileSize.setTitle(getString(R.string.setting_pcap_file_size, prefs.getString("pcap_file_size", "2")));
             updatePcapPref();
             return true;
         });
 
         final EditTextPreference watchdog = findPreference("watchdog");
-        watchdog.setTitle(getString(R.string.setting_watchdog, prefs.getString("watchdog", "0")));
         watchdog.setOnBindEditTextListener(editText -> editText.setInputType(InputType.TYPE_CLASS_NUMBER));
-        watchdog.setOnPreferenceChangeListener((preference, newValue) -> {
-            watchdog.setTitle(getString(R.string.setting_watchdog, prefs.getString("watchdog", "0")));
-            return true;
-        });
 
         final Preference showResolved = findPreference("show_resolved");
         if (Util.isPlayStoreInstall(getContext())) {

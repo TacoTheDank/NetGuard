@@ -20,12 +20,16 @@
         android:defaultValue="1000"
         android:dependency="show_stats"
         android:key="stats_frequency"
+        android:summary="@string/summary_stats_frequency"
+        android:title="@string/setting_stats_frequency"
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="90"
         android:dependency="show_stats"
         android:key="stats_samples"
+        android:summary="@string/summary_stats_samples"
+        android:title="@string/setting_stats_samples"
         app:iconSpaceReserved="false" />
 
 </PreferenceScreen>

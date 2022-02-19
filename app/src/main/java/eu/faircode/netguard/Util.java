@@ -741,17 +741,17 @@ public class Util {
         StringBuilder sb = new StringBuilder();
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 
-        sb.append(String.format("Interactive %B\r\n", isInteractive(context)));
-        sb.append(String.format("Connected %B\r\n", isConnected(context)));
-        sb.append(String.format("WiFi %B\r\n", isWifiActive(context)));
-        sb.append(String.format("Metered %B\r\n", isMeteredNetwork(context)));
-        sb.append(String.format("Roaming %B\r\n", isRoaming(context)));
+        sb.append(String.format("Interactive — %B\r\n", isInteractive(context)));
+        sb.append(String.format("Connected — %B\r\n", isConnected(context)));
+        sb.append(String.format("WiFi — %B\r\n", isWifiActive(context)));
+        sb.append(String.format("Metered — %B\r\n", isMeteredNetwork(context)));
+        sb.append(String.format("Roaming — %B\r\n", isRoaming(context)));
 
         if (tm.getSimState() == TelephonyManager.SIM_STATE_READY)
-            sb.append(String.format("SIM %s/%s/%s\r\n", tm.getSimCountryIso(), tm.getSimOperatorName(), tm.getSimOperator()));
+            sb.append(String.format("SIM — %s/%s/%s\r\n", tm.getSimCountryIso(), tm.getSimOperatorName(), tm.getSimOperator()));
         //if (tm.getNetworkType() != TelephonyManager.NETWORK_TYPE_UNKNOWN)
         try {
-            sb.append(String.format("Network %s/%s/%s\r\n", tm.getNetworkCountryIso(), tm.getNetworkOperatorName(), tm.getNetworkOperator()));
+            sb.append(String.format("Network — %s/%s/%s\r\n", tm.getNetworkCountryIso(), tm.getNetworkOperatorName(), tm.getNetworkOperator()));
         } catch (Throwable ex) {
             /*
                 06-14 13:02:41.331 19703 19703 W ircode.netguar: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
@@ -775,11 +775,11 @@ public class Util {
 
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-            sb.append(String.format("Power saving %B\r\n", pm.isPowerSaveMode()));
+            sb.append(String.format("Power saving — %B\r\n", pm.isPowerSaveMode()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            sb.append(String.format("Battery optimizing %B\r\n", batteryOptimizing(context)));
+            sb.append(String.format("Battery optimizing — %B\r\n", batteryOptimizing(context)));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-            sb.append(String.format("Data saving %B\r\n", dataSaving(context)));
+            sb.append(String.format("Data saving — %B\r\n", dataSaving(context)));
 
         if (sb.length() > 2)
             sb.setLength(sb.length() - 2);

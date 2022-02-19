@@ -7,7 +7,9 @@
         android:entries="@array/themeNames"
         android:entryValues="@array/themeValues"
         android:key="theme"
-        app:iconSpaceReserved="false" />
+        android:title="@string/setting_theme"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
@@ -26,12 +28,14 @@
         android:defaultValue="0"
         android:key="auto_enable"
         android:summary="@string/summary_auto"
+        android:title="@string/setting_auto"
         app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="0"
         android:key="screen_delay"
         android:summary="@string/summary_delay"
+        android:title="@string/setting_delay"
         app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat

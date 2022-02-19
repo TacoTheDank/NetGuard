@@ -29,6 +29,7 @@
         android:defaultValue="@array/default_wifi_home"
         android:key="wifi_homes"
         android:summary="@string/summary_wifi_home"
+        android:title="@string/setting_wifi_home"
         app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat

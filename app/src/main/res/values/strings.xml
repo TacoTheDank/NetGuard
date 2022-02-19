@@ -68,20 +68,21 @@
     <string name="setting_whitelist_roaming">Block roaming</string>
 
     <string name="setting_options">Options</string>
-    <string name="setting_theme">Theme: %1$s</string>
+    <string name="setting_theme">Theme</string>
     <string name="setting_dark">Use dark theme</string>
     <string name="setting_install">Notify on new install</string>
     <string name="setting_screen_on">Apply \'when screen on\' rules</string>
-    <string name="setting_auto">Auto enable after %1$s minutes</string>
-    <string name="setting_delay">Delay screen off %1$s minutes</string>
+    <string name="setting_auto">Auto enable after chosen minutes</string>
+    <string name="setting_delay">Delay screen off for chosen minutes</string>
     <string name="setting_update">Check for updates</string>
 
     <string name="setting_network_options">Network options</string>
     <string name="setting_subnet">Subnet routing</string>
     <string name="setting_tethering">Allow tethering</string>
     <string name="setting_lan">Allow LAN access</string>
+    <string name="setting_loglevel">Native log level</string>
     <string name="setting_ip6">Enable IPv6 traffic</string>
-    <string name="setting_wifi_home">Wi-Fi home networks: %1$s</string>
+    <string name="setting_wifi_home">Wi-Fi home networks</string>
     <string name="setting_metered">Handle metered Wi-Fi networks</string>
     <string name="setting_metered_2g">Consider 2G unmetered</string>
     <string name="setting_metered_3g">Consider 3G unmetered</string>
@@ -106,27 +107,28 @@
     <string name="setting_reset_usage">Reset network usage</string>
     <string name="setting_show_resolved">Show resolved domain names</string>
     <string name="setting_block_domains">Block domain names</string>
-    <string name="setting_rcode">DNS response code: %s</string>
+    <string name="setting_rcode">DNS response code</string>
     <string name="setting_forwarding">Port forwarding</string>
-    <string name="setting_vpn4">VPN IPv4: %s</string>
-    <string name="setting_vpn6">VPN IPv6: %s</string>
-    <string name="setting_dns">VPN DNS: %s</string>
-    <string name="setting_validate">Validate at: %s</string>
-    <string name="setting_ttl">Minimum DNS TTL: %s s</string>
+    <string name="setting_vpn4">VPN IPv4</string>
+    <string name="setting_vpn6">VPN IPv6</string>
+    <string name="setting_dns">Primary DNS</string>
+    <string name="setting_dns2">Secondary DNS</string>
+    <string name="setting_validate">Validate at this address</string>
+    <string name="setting_ttl">Minimum DNS TTL</string>
     <string name="setting_socks5_enabled">Use SOCKS5 proxy</string>
-    <string name="setting_socks5_addr">SOCKS5 address: %s</string>
-    <string name="setting_socks5_port">SOCKS5 port: %s</string>
-    <string name="setting_socks5_username">SOCKS5 username: %s</string>
-    <string name="setting_socks5_password">SOCKS5 password: %s</string>
-    <string name="setting_pcap_record_size">PCAP record size: %s B</string>
-    <string name="setting_pcap_file_size">PCAP max. file size: %s MB</string>
-    <string name="setting_watchdog">Watchdog: every %s minutes</string>
+    <string name="setting_socks5_addr">SOCKS5 address</string>
+    <string name="setting_socks5_port">SOCKS5 port</string>
+    <string name="setting_socks5_username">SOCKS5 username</string>
+    <string name="setting_socks5_password">SOCKS5 password</string>
+    <string name="setting_pcap_record_size">PCAP record size</string>
+    <string name="setting_pcap_file_size">PCAP max. file size</string>
+    <string name="setting_watchdog">Watchdog</string>
 
     <string name="setting_stats_category">Speed notification</string>
     <string name="setting_stats">Show speed notification</string>
     <string name="setting_stats_top">Show top apps</string>
-    <string name="setting_stats_frequency">Sample interval: %s ms</string>
-    <string name="setting_stats_samples">Number of samples: %s s</string>
+    <string name="setting_stats_frequency">Sample interval</string>
+    <string name="setting_stats_samples">Number of samples</string>
 
     <string name="setting_backup">Backup</string>
     <string name="setting_export">Export settings</string>
@@ -144,15 +146,16 @@
     <string name="setting_technical_subscription">Subscriptions</string>
 
     <string name="summary_install">Show status bar notification to directly configure newly installed apps (pro feature)</string>
-    <string name="summary_auto">After disabling using the widget, automatically enable NetGuard again after the selected number of minutes (enter zero to disable this option)</string>
-    <string name="summary_delay">After turning the screen off, keep screen on rules active for the selected number of minutes (enter zero to disable this option)</string>
+    <string name="summary_auto">After disabling using the widget, automatically enable NetGuard again after the selected number of minutes (enter zero to disable this option)\n\nCurrent setting — %1$s</string>
+    <string name="summary_delay">After turning the screen off, keep screen on rules active for the selected number of minutes (enter zero to disable this option)\n\nCurrent setting — %1$s</string>
     <string name="summary_update">Check for new releases on GitHub twice daily</string>
 
     <string name="summary_tethering">Depending on the Android version, tethering may work or may not work. Tethered traffic cannot be filtered.</string>
     <string name="summary_subnet">Enable subnet routing; might enable Wi-Fi calling, but might also trigger bugs in Android and increase battery usage</string>
     <string name="summary_lan">Allow apps to connect to local area network addresses, like 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16</string>
+    <string name="summary_loglevel">Log level verbose, debug and info will impact performance and battery usage.\n\nCurrent setting — %s</string>
     <string name="summary_ip6">Route IP version 6 traffic to NetGuard so it can selectively be allowed or blocked</string>
-    <string name="summary_wifi_home">Apply Wi-Fi network rules for selected network only (apply mobile network rules for other Wi-Fi networks)</string>
+    <string name="summary_wifi_home">Apply Wi-Fi network rules for selected network only (apply mobile network rules for other Wi-Fi networks)\n\n%1$s</string>
     <string name="summary_metered">Apply mobile network rules to metered (paid, tethered) Wi-Fi networks</string>
     <string name="summary_metered_2g">Apply Wi-Fi network rules for 2G data connections</string>
     <string name="summary_metered_3g">Apply Wi-Fi network rules for 3G data connections</string>
@@ -167,12 +170,17 @@
     <string name="summary_filter">Filter IP packets going out of the VPN tunnel. This might result in extra battery usage.</string>
     <string name="summary_track_usage">Track the number of bytes sent and received for each app and address. This might result in extra battery usage.</string>
     <string name="summary_block_domains">Respond with the configured DNS response code for blocked domain names. This switch is disabled when no hosts file is available.</string>
-    <string name="summary_rcode">The default value is 3 (NXDOMAIN), which means \'non-existent domain\'.</string>
-    <string name="summary_validate">Domain name used to validate the internet connection at port 443 (https).</string>
+    <string name="summary_rcode">The default value is 3 (NXDOMAIN), which means \'non-existent domain\'.\n\nCurrent value — %1$s</string>
+    <string name="summary_validate">Domain name used to validate the internet connection at port 443 (https).\n\nCurrent address — %1$s</string>
+    <string name="summary_ttl">%1$s s</string>
     <string name="summary_socks5_enabled">Only TCP traffic will be sent to the proxy server</string>
-    <string name="summary_watchdog">Periodically check if NetGuard is still running (enter zero to disable this option). This might result in extra battery usage.</string>
+    <string name="summary_pcap_record_size">%1$s B</string>
+    <string name="summary_pcap_file_size">%1$s MB</string>
+    <string name="summary_watchdog">Periodically check if NetGuard is still running (enter zero to disable this option). This might result in extra battery usage.\n\nCurrent setting — every %1$s minute(s)</string>
 
     <string name="summary_stats">Show network speed graph in status bar notification</string>
+    <string name="summary_stats_frequency">%1$s ms</string>
+    <string name="summary_stats_samples">%1$s s</string>
 
     <string-array name="default_wifi_home"></string-array>
 
