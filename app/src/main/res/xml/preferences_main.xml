@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
         android:key="screen_defaults"
-        android:title="@string/setting_defaults" />
+        android:title="@string/setting_defaults"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_options"
-        android:title="@string/setting_options" />
+        android:title="@string/setting_options"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_network_options"
-        android:title="@string/setting_network_options" />
+        android:title="@string/setting_network_options"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_advanced_options"
-        android:title="@string/setting_advanced_options" />
+        android:title="@string/setting_advanced_options"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_stats"
-        android:title="@string/setting_stats_category" />
+        android:title="@string/setting_stats_category"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_backup"
-        android:title="@string/setting_backup" />
+        android:title="@string/setting_backup"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_development"
-        android:title="@string/setting_development_options" />
+        android:title="@string/setting_development_options"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="screen_technical"
-        android:title="@string/setting_technical" />
+        android:title="@string/setting_technical"
+        app:iconSpaceReserved="false" />
 
 </PreferenceScreen>

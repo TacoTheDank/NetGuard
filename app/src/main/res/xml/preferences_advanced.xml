@@ -1,136 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="manage_system"
         android:summary="@string/summary_system"
-        android:title="@string/setting_system" />
+        android:title="@string/setting_system"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="log_app"
         android:summary="@string/summary_log_app"
-        android:title="@string/setting_log_app" />
+        android:title="@string/setting_log_app"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:dependency="log_app"
         android:key="notify_access"
         android:summary="@string/summary_access"
-        android:title="@string/setting_access" />
+        android:title="@string/setting_access"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="filter"
         android:summary="@string/summary_filter"
-        android:title="@string/setting_filter" />
+        android:title="@string/setting_filter"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:dependency="filter"
         android:key="filter_udp"
-        android:title="@string/setting_filter_udp" />
+        android:title="@string/setting_filter_udp"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:dependency="filter"
         android:key="handover"
-        android:title="@string/setting_handover" />
+        android:title="@string/setting_handover"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:dependency="filter"
         android:key="track_usage"
         android:summary="@string/summary_track_usage"
-        android:title="@string/setting_track_usage" />
+        android:title="@string/setting_track_usage"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="reset_usage"
-        android:title="@string/setting_reset_usage" />
+        android:title="@string/setting_reset_usage"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="true"
         android:dependency="filter"
         android:key="use_hosts"
         android:summary="@string/summary_block_domains"
-        android:title="@string/setting_block_domains" />
+        android:title="@string/setting_block_domains"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
         android:key="rcode"
-        android:summary="@string/summary_rcode" />
+        android:summary="@string/summary_rcode"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:dependency="filter"
         android:key="forwarding"
-        android:title="@string/setting_forwarding" />
+        android:title="@string/setting_forwarding"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:hint="10.1.10.1"
-        android:key="vpn4" />
+        android:key="vpn4"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:hint="fd00:1:fd00:1:fd00:1:fd00:1"
-        android:key="vpn6" />
+        android:key="vpn6"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
-        android:key="dns" />
+        android:key="dns"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
-        android:key="dns2" />
+        android:key="dns2"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:hint="www.google.com"
         android:key="validate"
-        android:summary="@string/summary_validate" />
+        android:summary="@string/summary_validate"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
-        android:key="ttl" />
+        android:key="ttl"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:dependency="filter"
         android:key="socks5_enabled"
         android:summary="@string/summary_socks5_enabled"
-        android:title="@string/setting_socks5_enabled" />
+        android:title="@string/setting_socks5_enabled"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
         android:hint="127.0.0.1"
-        android:key="socks5_addr" />
+        android:key="socks5_addr"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
         android:hint="1080"
-        android:key="socks5_port" />
+        android:key="socks5_port"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
-        android:key="socks5_username" />
+        android:key="socks5_username"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:dependency="filter"
-        android:key="socks5_password" />
+        android:key="socks5_password"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="64"
-        android:key="pcap_record_size" />
+        android:key="pcap_record_size"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="2"
-        android:key="pcap_file_size" />
+        android:key="pcap_file_size"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="0"
         android:key="watchdog"
-        android:summary="@string/summary_watchdog" />
+        android:summary="@string/summary_watchdog"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="show_resolved"
-        android:title="@string/setting_show_resolved" />
+        android:title="@string/setting_show_resolved"
+        app:iconSpaceReserved="false" />
 
 </PreferenceScreen>

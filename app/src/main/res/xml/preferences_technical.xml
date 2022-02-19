@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
         android:key="technical_info"
-        android:title="@string/setting_technical_general" />
+        android:title="@string/setting_technical_general"
+        app:iconSpaceReserved="false" />
 
     <Preference
         android:key="technical_network"
-        android:title="@string/setting_technical_networks" />
+        android:title="@string/setting_technical_networks"
+        app:iconSpaceReserved="false" />
 
 </PreferenceScreen>

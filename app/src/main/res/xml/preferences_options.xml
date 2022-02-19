@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ListPreference
         android:defaultValue="teal"
         android:entries="@array/themeNames"
         android:entryValues="@array/themeValues"
-        android:key="theme" />
+        android:key="theme"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="dark_theme"
-        android:title="@string/setting_dark" />
+        android:title="@string/setting_dark"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="install"
         android:summary="@string/summary_install"
-        android:title="@string/setting_install" />
+        android:title="@string/setting_install"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="0"
         android:key="auto_enable"
-        android:summary="@string/summary_auto" />
+        android:summary="@string/summary_auto"
+        app:iconSpaceReserved="false" />
 
     <EditTextPreference
         android:defaultValue="0"
         android:key="screen_delay"
-        android:summary="@string/summary_delay" />
+        android:summary="@string/summary_delay"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="true"
         android:key="update_check"
         android:summary="@string/summary_update"
-        android:title="@string/setting_update" />
+        android:title="@string/setting_update"
+        app:iconSpaceReserved="false" />
 
 </PreferenceScreen>

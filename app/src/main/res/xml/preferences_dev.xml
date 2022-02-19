@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ListPreference
         android:defaultValue="6"
@@ -7,17 +8,20 @@
         android:entryValues="@array/logLevelValues"
         android:key="loglevel"
         android:summary="Log level verbose, debug and info will impact performance and battery usage"
-        android:title="Native log level" />
+        android:title="Native log level"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="true"
         android:key="ip6"
         android:summary="@string/summary_ip6"
-        android:title="@string/setting_ip6" />
+        android:title="@string/setting_ip6"
+        app:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="debug_iab"
-        android:title="Debug IAB" />
+        android:title="Debug IAB"
+        app:iconSpaceReserved="false" />
 
 </PreferenceScreen>
